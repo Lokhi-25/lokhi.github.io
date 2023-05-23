@@ -1,8 +1,1 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const mode_toggle = document.getElementById("light-toggle");
-
-    mode_toggle.addEventListener("click", function() {
-        toggleTheme(localStorage.getItem("theme"));
-    });
-});
-
+$(document).ready(function(){document.getElementById("light-toggle").addEventListener("click",function(){const e=localStorage.getItem("theme");t(e)});let t=t=>{e("dark"==t?"light":"dark")},e=t=>{n(),t?document.documentElement.setAttribute("data-theme",t):document.documentElement.removeAttribute("data-theme"),localStorage.setItem("theme",t)},n=()=>{document.documentElement.classList.add("transition"),window.setTimeout(()=>{document.documentElement.classList.remove("transition")},500)}});
